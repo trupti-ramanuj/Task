@@ -100,7 +100,7 @@
  @media (min-width: 768px) {
 
      .card-container {
-         max-width: 1110px;
+         max-width: 1010px;
          flex-direction: row-reverse;
          text-align: left;
          height: 446px;
