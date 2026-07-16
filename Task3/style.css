@@ -26,7 +26,7 @@ body {
 }
 
 .container .card {
-    width: 750px;
+    width: 250em;
     height: 500px;
     display: flex;
     background: var(--primery-White);
@@ -59,12 +59,12 @@ img {
 }
 
 .h1 {
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 700;
-    /* margin: 20px 0px; */
+    margin: 20px 0px;
     font-family: Fraunces, sans-serif;
     color: var(--primery-Black);
-    line-height: 40px;
+    line-height: 50px;
 }
 
 .two {
@@ -93,7 +93,7 @@ span {
 }
 
 button {
-    width: 300px;
+    width: em;
     height: 50px;
     border-radius: 5px;
     /* margin-top: 35px; */
@@ -111,19 +111,19 @@ button {
 #cart {
     width: 20px;
     height: 20px;
-    margin: 10px;
+    margin: 1rem;
 }
 
 
 
 @media screen and (max-width: 770px) {
     .card {
-        width: 700px;
+        width: 700em;
         margin: 30px;
     }
 
     .right {
-        width: 80%;
+        width: 50%;
     }
 
     .h1 {
@@ -176,19 +176,19 @@ button {
     }
 
     button {
-        width: 200px;
+        width: 30em;
         font-size: 15px;
     }
 
     #cart {
-        width: 15px;
+        width: 15em;
         height: 15px;
     }
 }
 
 @media screen and (max-width: 536px) {
     .container {
-        height: 1500px;
+        height: 1500em;
         margin: 30px;
     }
 
@@ -229,7 +229,7 @@ button {
     }
 
     #cart {
-        width: 15px;
+        width: 15em;
         height: 15px;
     }
 }
@@ -270,13 +270,12 @@ button {
     }
 
     button {
-        width: 200px;
+        width: 30em;
         font-size: 15px;
-
     }
 
     #cart {
-        width: 15px;
+        width: 15em;
         height: 15px;
     }
 }
