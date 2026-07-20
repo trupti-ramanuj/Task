@@ -18,6 +18,7 @@ body {
 }
 
 .container {
+
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -26,7 +27,9 @@ body {
 }
 
 .container .card {
-    width: 250em;
+    /* width: 250em; */
+    max-width: 250em;
+    margin: 0px auto;
     height: 500px;
     display: flex;
     background: var(--primery-White);
@@ -40,14 +43,17 @@ body {
 img {
     width: 100%;
     margin: 0;
-    height: 500px;
+    height: 100%;
     padding: 0;
     border-radius: 15px 0px 0px 15px;
 }
 
 .container .card .right {
     flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
     padding: 50px;
+    gap: 15px;
 }
 
 .one {
@@ -61,10 +67,10 @@ img {
 .h1 {
     font-size: 4rem;
     font-weight: 700;
-    margin: 20px 0px;
+    /* margin: 20px 0px; */
     font-family: Fraunces, sans-serif;
     color: var(--primery-Black);
-    line-height: 50px;
+    line-height: 80px;
 }
 
 .two {
@@ -74,11 +80,12 @@ img {
     font-family: Montserrat, sans-serif;
     word-spacing: 1px;
     text-align: left;
-    line-height: 25px;
+    line-height: 30px;
 }
 
 .footer {
     display: flex;
+    margin-top: 10px;
 }
 
 .h2 {
@@ -87,16 +94,13 @@ img {
 }
 
 span {
-    /* margin: 10px; */
     color: var(--primery-Grey);
-
 }
 
 button {
     width: em;
     height: 50px;
     border-radius: 5px;
-    /* margin-top: 35px; */
     border: 0;
     outline: 0;
     font-size: 20px;
@@ -225,7 +229,6 @@ button {
     button {
         width: 200px;
         font-size: 15px;
-
     }
 
     #cart {
@@ -237,7 +240,6 @@ button {
 @media screen and (max-width: 320px) {
     .container {
         height: 1500px;
-
     }
 
     .card {
@@ -249,12 +251,10 @@ button {
 
     .container .card {
         height: 1200px;
-
     }
 
     img {
         border-radius: 15px 15px 0px 0px;
-
     }
 
     .one {
