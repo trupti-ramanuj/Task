@@ -56,7 +56,7 @@ main {
 .circle {
     width: 200px;
     height: 200px;
-    border-radius: 100px;
+    border-radius: 50%;
     background: linear-gradient(var(--persian-blue-circle), var(--violet-blue-circle));
     align-content: center;
     justify-content: center;
@@ -111,7 +111,7 @@ main {
 }
 
 .title2 {
-    font-weight: 700px;
+    font-weight: 700;
     margin-bottom: 1.5rem;
     text-align: left;
     color: var(--dark-gray-blue);
@@ -181,7 +181,6 @@ li {
     width: 90%;
     max-width: 900px;
     display: flex;
-    float: left;
     margin: 5px;
     justify-content: space-between;
     align-content: center;
@@ -224,13 +223,14 @@ li {
     body {
         height: 300px;
         width: 100%;
-        border-radius: 2rem 2rem;
-        padding-top: 50px;
     }
 
     .main {
         width: 100%;
-        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
 
     .container {
@@ -279,4 +279,11 @@ li {
         flex: 1;
     }
 
+}
+
+@media (max-width:960) {
+    body {
+        height: 300px;
+        width: 100%;
+    }
 }
