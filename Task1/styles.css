@@ -1,21 +1,21 @@
 :root {
-    --primery-Gold: hsl(31, 77%, 52%);
-    --primery-Cyan: hsl(184, 100%, 22%);
-    --primery-Green: hsl(179, 100%, 13%);
-    --primery-Transparent: hsla(0, 0%, 100%, 0.75);
-    --primery-Gray: hsl(0, 0%, 95%);
+    --primary-Gold: hsl(31, 77%, 52%);
+    --primary-Cyan: hsl(184, 100%, 22%);
+    --primary-Green: hsl(179, 100%, 13%);
+    --primary-Transparent: hsla(0, 0%, 100%, 0.75);
+    --primary-Gray: hsl(0, 0%, 95%);
 
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Lexend Deca", sans-serif;
 }
 
 body {
-    background: var(--primery-Gray);
+    background: var(--primary-Gray);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -32,11 +32,8 @@ body {
 
 .card {
     flex: 1;
-    max-height: 600px;
-    padding: 30px;
-    background: var(--primery-Gray);
+    background: var(--primary-Gray);
     text-align: left;
-    cursor: pointer;
     padding: 45px 35px;
 }
 
@@ -45,78 +42,67 @@ body {
 }
 
 .card h2 {
-    font-size: 38px;
-    margin: 20px 0px;
-    color: var(--primery-Gray);
+    font-size: 2.375rem;
+    margin: 20px 0;
+    color: var(--primary-Gray);
+    font-family: "Big Shoulders Display", sans-serif;
     text-transform: uppercase;
 }
 
 .card p {
-    color: var(--primery-Transparent);
-    font-size: 18px;
+    color: var(--primary-Transparent);
+    font-size: .9rem;
     margin-bottom: 40px;
     line-height: 1.7;
 }
 
 button {
-    width: 300px;
-    height: 60px;
+    max-width: 300px;
+    width: 100%;
+    padding: 16px 32px;
     border-radius: 30px;
     border: none;
     font-size: 20px;
-    background-color: var(--primery-Gray);
+    background-color: var(--primary-Gray);
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:focus-visible {
+    outline: 2px solid var(--primary-Gray);
+    outline-offset: 2px;
 }
 
 .one {
-    color: var(--primery-Gold);
+    color: var(--primary-Gold);
 }
 
 .two {
-    color: var(--primery-Cyan);
+    color: var(--primary-Cyan);
 }
 
 .three {
-    color: var(--primery-Green);
+    color: var(--primary-Green);
 }
 
 .card1 {
-    background: var(--primery-Gold);
+    background: var(--primary-Gold);
 }
 
 .card2 {
-    background: var(--primery-Cyan);
+    background: var(--primary-Cyan);
 }
 
 .card3 {
-    background: var(--primery-Green);
+    background: var(--primary-Green);
 
-}
-
-@media (max-width:1090px) {
-
-    .card {
-        padding: 35px 25px;
-    }
-
-    .card h2 {
-        font-size: 2rem;
-    }
-
-    .card p {
-        font-size: 0.95rem;
-        margin-bottom: 40px;
-    }
-
-    button {
-        width: 100%;
-        padding: 15px;
-    }
 }
 
 
 @media (max-width:992px) {
-
-
     .card {
         padding: 35px 25px;
     }
@@ -127,24 +113,14 @@ button {
 
     .card p {
         font-size: 0.95rem;
-        margin-bottom: 40px;
     }
 
-    button {
-        width: 100%;
-        padding: 15px;
-    }
 }
 
 @media screen and (max-width:768px) {
-    body {
-        height: 600px;
-    }
-
 
     .card {
-        width: 100%;
-        padding: 25px 20px;
+        flex: 1;
     }
 
     .card h2 {
@@ -155,30 +131,16 @@ button {
         margin-bottom: 30px;
     }
 
-    button {
-        width: 100%;
-    }
 }
 
 @media (max-width:570px) {
 
-    body {
-        height: 600px;
-    }
-
-    .card {
-        padding: 25px 20px;
-    }
-
     .card-container {
         flex-direction: column;
         justify-content: center;
-        align-content: center;
-        width: 400px;
-    }
 
-    .card img {
-        width: 50px;
+        width: 100%;
+        max-width: 400px;
     }
 
     .card h2 {
@@ -189,53 +151,8 @@ button {
         font-size: 0.9rem;
     }
 
-    button {
-        font-size: 0.9rem;
-        padding: 14px;
-    }
-}
-
-
-
-@media (max-width:480px) {
-
-    body {
-        padding: 20px;
-        height: 600px;
+    .card button {
+        font-size: 1rem;
     }
 
-    .card {
-        padding: 25px 20px;
-    }
-
-    .card-container {
-        width: 400px;
-    }
-
-    .card img {
-        width: 50px;
-    }
-
-    .card h2 {
-        font-size: 1.5rem;
-    }
-
-    .card p {
-        font-size: 0.9rem;
-    }
-
-    button {
-        font-size: 0.9rem;
-        padding: 14px;
-    }
-}
-
-@media (max-width:320px) {
-    body {
-        height: 600px;
-    }
-
-    .card-container {
-        max-width: 315px;
-    }
 }

@@ -1,10 +1,10 @@
 :root {
-    --primery-Green: hsl(158, 36%, 37%);
-    --primery-Green-heding: hsl(158, 42%, 18%);
-    --primery-Black: hsl(212, 21%, 14%);
-    --primery-Grey: hsl(228, 12%, 48%);
-    --primery-Cream: hsl(30, 38%, 92%);
-    --primery-White: hsl(0, 0%, 100%);
+    --primary-Green: hsl(158, 36%, 37%);
+    --primary-Green-heading: hsl(158, 42%, 18%);
+    --primary-Black: hsl(212, 21%, 14%);
+    --primary-Grey: hsl(228, 12%, 48%);
+    --primary-Cream: hsl(30, 38%, 92%);
+    --primary-White: hsl(0, 0%, 100%);
 }
 
 * {
@@ -14,43 +14,42 @@
 }
 
 body {
-    background: var(--primery-Cream);
+    background: var(--primary-Cream);
     font-size: 15px;
 }
 
 .container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--primery-Cream);
 }
 
 .container .card {
     width: 90%;
     max-width: 750px;
     display: flex;
-    background: var(--primery-White);
+    background: var(--primary-White);
     border-radius: 15px;
 }
 
 .container .card .left {
-    flex-basis: 100%;
     position: relative;
 }
 
 .left img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    max-height: 500px;
-    min-height: 100%;
-    border-radius: 15px 0px 0px 15px;
+.left,
+.right {
+    flex: 1;
 }
 
 .container .card .right {
-    flex-basis: 100%;
-    position: relative;
     padding: 20px 40px;
     display: flex;
     flex-direction: column;
@@ -62,7 +61,7 @@ body {
     letter-spacing: 5px;
     margin: 5px 5px;
     font-family: Montserrat, sans-serif;
-    color: var(--primery-Grey);
+    color: var(--primary-Grey);
     text-transform: uppercase;
 }
 
@@ -70,15 +69,15 @@ body {
     font-size: 40px;
     font-weight: 600;
     font-family: Fraunces, sans-serif;
-    color: var(--primery-Black);
+    color: var(--primary-Black);
     margin-bottom: 15px;
     line-height: 40px;
 }
 
 .two {
-    font-weight: 30px;
+    font-weight: 300;
     font-size: 16px;
-    color: var(--primery-Grey);
+    color: var(--primary-Grey);
     font-family: Montserrat, sans-serif;
     word-spacing: 1px;
     text-align: left;
@@ -91,25 +90,24 @@ body {
 }
 
 .h2 {
-    color: var(--primery-Green);
-    font-weight: 20px;
+    color: var(--primary-Green);
+    font-weight: 700;
 }
 
 span {
     margin: 10px;
-    color: var(--primery-Grey);
+    color: var(--primary-Grey);
 }
 
 button {
-    width: 300px;
-    height: 50px;
+    padding: 10px;
     border-radius: 5px;
     border: 0;
     outline: 0;
     font-size: 20px;
-    font-weight: 50px;
-    background-color: var(--primery-Green);
-    color: var(--primery-Cream);
+    font-weight: 700;
+    background-color: var(--primary-Green);
+    color: var(--primary-Cream);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,12 +121,9 @@ button img {
 }
 
 @media screen and (max-width: 600px) {
-    .container {
-        height: 1500px;
-    }
 
     .card {
-        display: block;
+        display: flex;
         flex-direction: column;
         margin: 30px;
     }
