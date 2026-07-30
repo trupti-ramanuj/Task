@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link rel="stylesheet" href="./CSS/style.css">
+
 
     <script>
         tailwind.config = {
@@ -29,63 +31,78 @@
     </script>
 </head>
 
-<body class="font-euclid bg-white">
+<body class="font-euclid bg-white max-auto">
 
-    <!-- Section 1 -->
+    <header class="max-w-7xl mx-auto bg-[#FFFFFF] md:bg-white flex justify-between md:flex-col  lg:flex-row">
+        <nav class="w-full">
+            <div class="w-full gap-10  sm:px-6  py-3 flex items-center justify-between text-xs">
+                <a href="#" class="font-[400] font-bold text-xl  text-[#374151] font-euclid">Laura's
+                    Closet</a>
 
-    <header class="bg-white">
+                <div class="border-b-[1px] border-[#9CA3AF] ml-6 w-[200px]  lg:w-[280px] h-[24px]">
+                    <div class="relative flex ">
+                        <i class="fa-solid fa-magnifying-glass w-[16px] h-[16px]  text-[#9CA3AF] "></i>
+                        <input type="text" placeholder="Search for an Item..."
+                            class="w-[157px] h-[20px]  text-[16px]  font-[400] leading-[100%] outline-none  tracking-wide">
 
-        <div class="max-w-7xl mx-auto px-8 sm:px-6  py-3 flex items-center justify-between text-xs">
-            <a href="#" class="font-[400] font-bold text-xl tracking-wide text-[#374151] font-euclid">Laura's
-                Closet</a>
-
-            <div class="border-b-[1px] border-[#9CA3AF] w-[280px] h-[24px]">
-                <div class="relative flex">
-                    <i class="fa-solid fa-magnifying-glass w-[16px] h-[16px]  text-[#9CA3AF] "></i>
-                    <input type="text" placeholder="Search for an Item..."
-                        class="w-[157px] h-[20px]  text-[16px]  font-[400] leading-[100%]   tracking-wide">
+                    </div>
 
                 </div>
+                <div
+                    class="dropdown-menu lg:w-auto  absolute -top-full lg:static left-0  flex flex-col z-10 items-center gap-[30px]  text-[#6B7280] text-[16px] py-4 lg:py-0   tracking-wide bg-[#FFFFFF] w-full  lg:flex-row">
+                    <a href="Store">Store</a>
+                    <a href="Account">Account</a>
+                    <a href="Wish list">Wish list</a>
+                    <a href="Basket" class="flex items-center gap-1 font-semibold text-[#1F2937]">
+                        Basket <i class="fa-solid fa-basket-shopping"></i>
+                    </a>
+                </div>
+
+                <div class="toggle-botton lg:hidden left-[50%]  m-4"> <i class="fa-solid fa-bars"></i></div>
+
             </div>
 
-            <div class="flex items-center gap-[40px] text-[#6B7280] text-[16px]  tracking-wide ">
-                <a href="#">Store</a>
-                <a href="#">Account</a>
-                <a href="#">Wish list</a>
-                <a href="#" class="flex items-center gap-1 font-semibold text-[#1F2937]">
-                    Basket <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-            </div>
-        </div>
 
-        <!-- Section 2 -->
-        <nav class="flex justify-center bg-white">
-            <div
-                class="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8 flex items-center space-x-6 py-2.5 space-x-6 flex  justify-between  tracking-normal font-semibold text-[#374151] whitespace-nowrap">
-                <a href="#">New Arrivals <span
-                        class="bg-[#EB5757] text-white font-[600] px-[8px] py-[4px] rounded-[2px] gap-[8px]">#Fresh</span>
-                </a>
+            <!-- Section 2 -->
 
-                <a href="#">Dresses</a>
-                <a href="#">Tops</a>
-                <a href="#">Jackets</a>
-                <a href="#">Lingerie & Lounge Wear</a>
-                <a href="#">Beach wear</a>
-                <a href="#">Blouse</a>
-                <a href="#">Denim</a>
-                <a href="#">Vintage</a>
-                <a href="#">Shoes</a>
-                <a href="#">Sandals</a>
-                <a href="#">Bags</a>
-                <a href="#">Jewelries</a>
-            </div>
             <!-- </div> -->
-        </nav>
+            </div>
 
+        </nav>
     </header>
 
+    <script>
+        const toggleBtn = document.querySelector(".toggle-botton");
+        const dropdown = document.querySelector(".dropdown-menu");
+
+        toggleBtn.addEventListener("click", () => {
+            dropdown.classList.toggle('top-16');
+        })
+    </script>
+    <div
+        class="hidden left- flex flex-col  items-center gap-[40px] text-[#6B7280] text-[16px]  tracking-wide bg-[#FFFFFF] w-full  justify-center bg-white lg:block lg:flex-row lg:justify-between">
+        <div
+            class=" max-w-7xl mx-auto lg:px-8 flex  justify-between  text-xs sm:gap-x-1.5  font-semibold text-[#374151] whitespace-nowrap">
+            <a href="#">New Arrivals <span
+                    class="bg-[#EB5757] text-white font-[600] px-[8px] py-[4px] rounded-[2px] gap-[8px]">#Fresh</span>
+            </a>
+
+            <a href="Dresses">Dresses</a>
+            <a href="Tops">Tops</a>
+            <a href="Jackets">Jackets</a>
+            <a href="Lingerie & Lounge Wear">Lingerie & Lounge Wear</a>
+            <a href="Beach wear">Beach wear</a>
+            <a href="Blouse">Blouse</a>
+            <a href="Denim">Denim</a>
+            <a href="Vintage">Vintage</a>
+            <a href="Shoes">Shoes</a>
+            <a href="Sandals">Sandals</a>
+            <a href="Bags">Bags</a>
+            <a href="Jewelries">Jewelries</a>
+        </div>
+    </div>
     <!--  HERO Section 3 -->
-    <section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
 
         <div class="grid grid-cols-1 md:grid-cols-12  overflow-hidden min-h-[380px]">
             <div
@@ -118,7 +135,7 @@
 
 
     <!--  Section 4  -->
-    <section class="max-w-6xl mx-auto py-16 px-4">
+    <section class="max-w-7xl mx-auto py-16 px-4">
 
 
         <div class="text-center mb-10">
@@ -309,16 +326,17 @@
     <!-- Section 7-->
     <section class="max-w-7xl mx-auto px-4 py-10">
         <div>
-            <img src="./public/images/image 6.png" alt="Summer Collections" class=" absolute w-[1264px] h-[515px]">
+            <img src="./public/images/image 6.png" alt="Summer Collections"
+                class=" absolute w-[1264px] h-[515px] object-cover">
         </div>
         <div class="relative p-14  min-h-[300px] flex ">
 
-            <div class="min-w-[163px] min-h-[300px] top-[194px]  p-14">
-                <h2 class="text-[40px] font-[600] tracking-tight text-[#145381]">
+            <div class="min-w-[163px] min-h-[300px] top-[194px]  lg:p-14">
+                <h2 class="lg:text-[40px] font-[600] tracking-tight text-[#145381]">
                     SUMMER <span class="text-[#EB5757]">COLLECTIONS</span>
                 </h2>
                 <div class="w-[180px] h-[44px] bg-white text-[#EB5757] px-[16px] py-[12px] text-xl ">
-                    <a href="#" class="w-[91px] h-[20px] font-[600]  uppercase  gap-[16px]">
+                    <a href="#" class="w-[91px] h-[20px] font-[600]  uppercase  lg:gap-[16px]">
                         SHOP NOW <i class="fa-solid fa-arrow-right text-[24px]"></i>
                     </a>
                 </div>
@@ -350,7 +368,7 @@
 
     <!-- Footer Section 8 -->
     <footer
-        class="w-full max-w-[1440px] mx-auto min-h-[507px] bg-[#F9FAFB] py-[62px] px-4 sm:px-6 lg:px-12 text-sm text-gray-600 m-20">
+        class="max-w-7xl  max-w-[1440px] mx-auto min-h-[507px] bg-[#F9FAFB] py-[62px] px-4 sm:px-6 lg:px-12 text-sm text-gray-600 m-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-5 gap-8 mb-10">
 
 
