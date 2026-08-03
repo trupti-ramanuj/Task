@@ -12,42 +12,39 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    <link rel="stylesheet" href="./CSS/style.css">
+    <!-- <link rel="stylesheet" href="./CSS/style.css"> -->
 
     <script>
-        const { fontFamily } = require();
         tailwind.config = {
-
             theme: {
                 extend: {
                     fontFamily: {
-                        euclid: ['"Euclid Circular A"', 'sans-serif'],
+                        sans: ['Montserrat', 'sans-serif'],
                     },
-                },
-            },
-        };
-
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        peach: '#fbdcc4',
+                    }
+                }
+            }
+        }
     </script>
 </head>
 
-<style>
-    @font-face {
-        font-family: "Euclid Circular A";
-        src: url("/public/euclid-circular-a/Euclid\ Circular\ A\ Bold.ttf") format("ttf");
-    }
 
-    .font-euclid {
-        font-family: "Euclid Circular A", sans-serif;
-    }
-</style>
 
-<body class="font-euclid bg-white w-[1440px] w-auto  flex flex-col justify-center items-center">
+<body class="font-sans bg-white">
 
-    <header class="lg:w-[1440px]  mx-auto bg-[#FFFFFF] md:bg-white font-euclid flex gap-20 md:flex-col  lg:flex-row">
-        <nav class="w-full">
-            <div class="w-full gap-20 sm:px-6  py-10 flex justify-between text-xs">
-                <a href="#" class="font-[400] pt-3 font-medium text-[24px]  text-[#374151] font-euclid">Laura's
+    <header class="w-full">
+        <nav class="max-w-[1440px] mx-auto px-6">
+            <div class="flex items-center justify-between py-8">
+                <a href="#" class="font-[400] pt-3 font-medium text-[24px]  text-[#374151] font-sans">Laura's
                     Closet</a>
 
                 <div class="border-b-[1px] border-[#9CA3AF] ml-6 w-[200px] hidden sm:block lg:w-[280px] h-[24px]">
@@ -60,7 +57,7 @@
                 </div>
 
                 <div
-                    class="dropdown-menu lg:w-auto  absolute -top-full lg:static left-0  font-euclid flex flex-col z-10 items-center gap-[30px]  text-[#6B7280] text-[16px] py-4 font-[medium] lg:py-0   tracking-wide bg-[#FFFFFF] w-full  lg:flex-row">
+                    class="dropdown-menu lg:w-auto  absolute -top-full lg:static left-0  font-sans flex flex-col z-10 items-center gap-[30px]  text-[#6B7280] text-[16px] py-4 font-[medium] lg:py-0   tracking-wide bg-[#FFFFFF] w-full  lg:flex-row">
                     <a href="Store">Store</a>
                     <a href="Account">Account</a>
                     <a href="Wish list">Wish list</a>
@@ -73,47 +70,47 @@
                 </div>
 
             </div>
+
+
+            <script>
+                const toggleBtn = document.querySelector(".toggle-botton");
+                const dropdown = document.querySelector(".dropdown-menu");
+
+                toggleBtn.addEventListener("click", () => {
+                    dropdown.classList.toggle('top-16');
+                })
+
+            </script>
+
+
+            <div
+                class="hidden left- flex flex-col font-sans items-center gap-[40px] text-[#6B7280] text-[16px]  tracking-wide bg-[#FFFFFF] w-full  justify-center bg-white lg:block md:flex-row md:justify-between">
+                <div
+                    class=" w-auto  lg:px-8 flex  justify-between  text-xs sm:gap-x-1.5  font-semibold text-[#374151] whitespace-nowrap">
+                    <a href="#">New Arrivals <span
+                            class="bg-[#EB5757] text-white font-[600] px-[8px] py-[4px] rounded-[2px] gap-[8px]">#Fresh</span>
+                    </a>
+
+                    <a href="Dresses">Dresses</a>
+                    <a href="Tops">Tops</a>
+                    <a href="Jackets">Jackets</a>
+                    <a href="Lingerie & Lounge Wear">Lingerie & Lounge Wear</a>
+                    <a href="Beach wear">Beach wear</a>
+                    <a href="Blouse">Blouse</a>
+                    <a href="Denim">Denim</a>
+                    <a href="Vintage">Vintage</a>
+                    <a href="Shoes">Shoes</a>
+                    <a href="Sandals">Sandals</a>
+                    <a href="Bags">Bags</a>
+                    <a href="Jewelries">Jewelries</a>
+                </div>
+
+            </div>
             </div>
         </nav>
     </header>
-
-    <script>
-        const toggleBtn = document.querySelector(".toggle-botton");
-        const dropdown = document.querySelector(".dropdown-menu");
-
-        toggleBtn.addEventListener("click", () => {
-            dropdown.classList.toggle('top-16');
-        })
-
-    </script>
-
-
-    <div
-        class="hidden left- flex flex-col font-euclid items-center gap-[40px] text-[#6B7280] text-[16px]  tracking-wide bg-[#FFFFFF] w-full  justify-center bg-white lg:block md:flex-row md:justify-between">
-        <div
-            class=" w-[1440px] mx-auto lg:px-8 flex  justify-between  text-xs sm:gap-x-1.5  font-semibold text-[#374151] whitespace-nowrap">
-            <a href="#">New Arrivals <span
-                    class="bg-[#EB5757] text-white font-[600] px-[8px] py-[4px] rounded-[2px] gap-[8px]">#Fresh</span>
-            </a>
-
-            <a href="Dresses">Dresses</a>
-            <a href="Tops">Tops</a>
-            <a href="Jackets">Jackets</a>
-            <a href="Lingerie & Lounge Wear">Lingerie & Lounge Wear</a>
-            <a href="Beach wear">Beach wear</a>
-            <a href="Blouse">Blouse</a>
-            <a href="Denim">Denim</a>
-            <a href="Vintage">Vintage</a>
-            <a href="Shoes">Shoes</a>
-            <a href="Sandals">Sandals</a>
-            <a href="Bags">Bags</a>
-            <a href="Jewelries">Jewelries</a>
-        </div>
-
-    </div>
-
     <!--  Section 3  -->
-    <section class="lg:w-[1440px] w-auto py-8">
+    <section class="max-w-[1440px] mx-auto px-6 py-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[420px] ">
 
             <div class="lg:col-span-8 relative bg-[#1F2937] p-8 sm:p-12 md:p-16 flex items-center justify-start overflow-hidden"
@@ -159,7 +156,7 @@
 
 
     <!--  Section 4  -->
-    <section class="max-w-[1248px] mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <section class="max-w-[1440px] mx-auto px-6 py-16">
         <div class="text-center mb-10 md:mb-12">
             <h2 class="text-[24px] sm:text-2xl font-bold uppercase tracking-wider text-[#374151]">
                 This Weeks Highlights
@@ -167,7 +164,7 @@
             <div class="w-16 h-[2px] bg-[#374151] mx-auto mt-2"></div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="relative h-80 overflow-hidden group md:col-span-1">
                 <img src="./public/images/Rectangle 47.png" class="w-full h-full object-cover ">
 
@@ -238,16 +235,16 @@
 
 
     <!-- Section 5 -->
-    <section class="w-full py-12 md:py-16">
-        <div class="max-w-[1248px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="max-w-[1440px] mx-auto px-6 py-16">
+        <div class="px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10 md:mb-12">
                 <h2 class="text-[24px] font-[600] uppercase  text-[#374151]">
                     Popular this week
                 </h2>
-                <div class="w-14 sm:w-14 h-[3px] bg-[#374151] mx-auto mt-2.5 rounded-full"></div>
+                <div class="w-16  h-[2px] bg-[#374151] mx-auto mt-2 rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:gap-8 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
                 <div class="group flex flex-col">
                     <div class="aspect-[3/4] overflow-hidden mb-3">
@@ -322,7 +319,7 @@
     </section>
 
     <!-- Section 6-->
-    <section class="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <section class="max-w-[1440px] mx-auto px-6 py-16">
         <div class="text-center mb-10 md:mb-12">
             <h2 class="text-[24px] font-[600] uppercase  text-[#374151]">
                 Popular this week
@@ -331,7 +328,7 @@
         </div>
 
 
-        <div class="flex flex-wrap items-center justify-center gap-16">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             <img src="./public/images/Rectangle 68.png" alt="">
             <img src="./public/images/Rectangle 66.png" alt="">
             <img src="./public/images/Rectangle 69.png" alt="">
@@ -342,8 +339,7 @@
     </section>
 
     <!-- Section 7-->
-    <section
-        class="relative max-w-[1440px] lg:min-w-[1264px] mx-auto min-h-[500px] md:min-h-[515px] flex items-center overflow-hidden mx-10 my-8">
+    <section class="relative max-w-[1440px] mx-auto my-12 overflow-hidden">
         <img src="./public/images/image 6.png" alt="Summer Collections"
             class="absolute inset-0 w-full h-full items-center object-cover object-right md:object-center" />
         <div class="absolute inset-0 bg-black/10"></div>
@@ -393,9 +389,8 @@
 
     <!-- Footer Section 8 -->
 
-    <footer
-        class="lg:w-[1440px] w-auto  px-4 bg-[#F9FAFB] text-sm py-[62px] px-4 sm:px-8 lg:px-[72px] flex flex-col justify-center">
-        <div class="max-w-[1296px] mx-auto space-y-12">
+    <footer class="bg-[#F9FAFB]">
+        <div class="max-w-[1440px] mx-auto px-6 py-16">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-8">
 
