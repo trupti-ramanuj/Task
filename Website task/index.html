@@ -15,7 +15,6 @@
 
     <link rel="stylesheet" href="./CSS/style.css">
 
-
     <script>
         const { fontFamily } = require();
         tailwind.config = {
@@ -32,25 +31,36 @@
     </script>
 </head>
 
-<body class="font-euclid sans-serif bg-white max-w-[1440px] w-auto">
+<style>
+    @font-face {
+        font-family: "Euclid Circular A";
+        src: url("/public/euclid-circular-a/Euclid\ Circular\ A\ Bold.ttf") format("ttf");
+    }
 
-    <header class="max-w-7xl mx-auto bg-[#FFFFFF] md:bg-white flex justify-between md:flex-col  lg:flex-row">
+    .font-euclid {
+        font-family: "Euclid Circular A", sans-serif;
+    }
+</style>
+
+<body class="font-euclid bg-white w-[1440px] w-auto  flex flex-col justify-center items-center">
+
+    <header class="lg:w-[1440px]  mx-auto bg-[#FFFFFF] md:bg-white font-euclid flex gap-20 md:flex-col  lg:flex-row">
         <nav class="w-full">
-            <div class="w-full gap-10  sm:px-6  py-3 flex items-center justify-between text-xs">
-                <a href="#" class="font-[400] font-bold text-xl  text-[#374151] font-euclid">Laura's
+            <div class="w-full gap-20 sm:px-6  py-10 flex justify-between text-xs">
+                <a href="#" class="font-[400] pt-3 font-medium text-[24px]  text-[#374151] font-euclid">Laura's
                     Closet</a>
 
                 <div class="border-b-[1px] border-[#9CA3AF] ml-6 w-[200px] hidden sm:block lg:w-[280px] h-[24px]">
-                    <div class="relative flex ">
-                        <i class="fa-solid fa-magnifying-glass w-[16px] h-[16px]  text-[#9CA3AF] "></i>
+                    <div class="relative flex justify-start items-center ">
+                        <i
+                            class="fa-solid fa-magnifying-glass w-[10.67px] h-[10.67px] top-[2px] left-[2px] text-[#9CA3AF]  "></i>
                         <input type="text" placeholder="Search for an Item..."
-                            class="w-[157px] h-[20px]  text-[16px]  font-[400] leading-[100%] outline-none  tracking-wide">
-
+                            class="w-[157px] h-[20px]  text-[16px]  font-[400] leading-[100%] outline-none  ml-4 tracking-wide">
                     </div>
-
                 </div>
+
                 <div
-                    class="dropdown-menu lg:w-auto  absolute -top-full lg:static left-0  flex flex-col z-10 items-center gap-[30px]  text-[#6B7280] text-[16px] py-4 lg:py-0   tracking-wide bg-[#FFFFFF] w-full  lg:flex-row">
+                    class="dropdown-menu lg:w-auto  absolute -top-full lg:static left-0  font-euclid flex flex-col z-10 items-center gap-[30px]  text-[#6B7280] text-[16px] py-4 font-[medium] lg:py-0   tracking-wide bg-[#FFFFFF] w-full  lg:flex-row">
                     <a href="Store">Store</a>
                     <a href="Account">Account</a>
                     <a href="Wish list">Wish list</a>
@@ -59,16 +69,11 @@
                     </a>
                 </div>
 
-                <div class="toggle-botton lg:hidden left-[50%]  m-4"> <i class="fa-solid fa-bars"></i></div>
+                <div class="toggle-botton lg:hidden left-[50%] text-[#374151] m-4"> <i class="fa-solid fa-bars"></i>
+                </div>
 
             </div>
-
-
-
-
-
             </div>
-
         </nav>
     </header>
 
@@ -84,9 +89,9 @@
 
 
     <div
-        class="hidden left- flex flex-col  items-center gap-[40px] text-[#6B7280] text-[16px]  tracking-wide bg-[#FFFFFF] w-full  justify-center bg-white lg:block lg:flex-row lg:justify-between">
+        class="hidden left- flex flex-col font-euclid items-center gap-[40px] text-[#6B7280] text-[16px]  tracking-wide bg-[#FFFFFF] w-full  justify-center bg-white lg:block md:flex-row md:justify-between">
         <div
-            class=" max-w-[1440px] mx-auto lg:px-8 flex  justify-between  text-xs sm:gap-x-1.5  font-semibold text-[#374151] whitespace-nowrap">
+            class=" w-[1440px] mx-auto lg:px-8 flex  justify-between  text-xs sm:gap-x-1.5  font-semibold text-[#374151] whitespace-nowrap">
             <a href="#">New Arrivals <span
                     class="bg-[#EB5757] text-white font-[600] px-[8px] py-[4px] rounded-[2px] gap-[8px]">#Fresh</span>
             </a>
@@ -107,42 +112,54 @@
 
     </div>
 
+    <!--  Section 3  -->
+    <section class="lg:w-[1440px] w-auto py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[420px] ">
 
-    <section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="lg:col-span-8 relative bg-[#1F2937] p-8 sm:p-12 md:p-16 flex items-center justify-start overflow-hidden"
+                style="background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.02) 10px, transparent 10px, transparent 20px);">
 
-        <div class="grid grid-cols-1 md:grid-cols-12  overflow-hidden min-h-[380px]">
-            <div
-                class="md:col-span-6 bg-[#1a2332] text-white p-8 md:p-12 flex flex-col justify-center space-y-4 relative">
-                <h2 class="text-5xl font-semibold text-[#FAFAFA] tracking-tight">Get up to 30% off</h2>
-                <h1 class="text-3xl md:text-5xl font-extrabold text-[#f3ba92] tracking-tight">New Arrivals</h1>
-                <p class="text-sm text-[#F3F4F6] font-light ">
-                    Introducing our latest collection of products
-                </p>
-                <div class="pt-4">
-                    <a href="#"
-                        class="inline-flex items-center space-x-2 border border-white px-5 py-2.5 text-sm font-semibold tracking-wider uppercase ">
-                        <span>Place your Order</span>
-                        <i class="fa-solid fa-arrow-right text-[20px]"></i>
+                <div
+                    class="relative  bg-[#1F2937]/90 p-8 sm:p-10 md:p-12 max-w-lg w-full space-y-4 rounded-sm  shadow-xl">
+                    <h2
+                        class="text-3xl sm:text-4xl md:text-[42px] font-bold text-[#FAFAFA] leading-tight tracking-tight">
+                        Get up to 30% off
+                    </h2>
 
-                    </a>
+                    <h1
+                        class="text-3xl sm:text-4xl md:text-[42px] font-bold text-[#F7C59F] leading-none tracking-tight">
+                        New Arrivals
+                    </h1>
+
+                    <p class="text-sm sm:text-base text-[#F3F4F6] font-normal pt-1">
+                        Introducing our latest collection of products
+                    </p>
+
+                    <div class="pt-4">
+                        <a href="#"
+                            class="inline-flex items-center gap-3 border border-[#FAFAFA]/80 px-6 py-2.5 text-xs sm:text-sm font-semibold tracking-wider text-[#FAFAFA] uppercase hover:bg-white hover:text-[#1F2937] transition-all duration-200">
+                            <span>Place Your Order</span>
+                            <i class="fa-solid fa-arrow-right text-base"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
+            <div
+                class="lg:col-span-4 relative flex items-center justify-center bg-[#F7C59F] p-6 min-h-[360px] lg:min-h-full">
 
-            <div class="md:col-span-6 relative flex items-center justify-center bg-[#F7C59F] p-6">
-
-                <div class="absolute w-64 h-64 md:w-80 md:h-80 bg-white rounded-full"></div>
+                <div class="absolute w-64 h-64 bg-[#FFFFFF] rounded-full"></div>
 
                 <img src="./public/images/image-removebg-preview 1.png" alt="New Arrivals Fashion Model"
-                    class="relative z-10 h-[360px] md:h-96 object-contain">
+                    class="relative z-5 h-[380px] sm:h-[420px] lg:w-[312px] object-contain -my-6 top-[20px] scale-105" />
             </div>
+
         </div>
     </section>
 
 
     <!--  Section 4  -->
     <section class="max-w-[1248px] mx-auto py-12 px-4 sm:px-6 lg:px-8">
-
         <div class="text-center mb-10 md:mb-12">
             <h2 class="text-[24px] sm:text-2xl font-bold uppercase tracking-wider text-[#374151]">
                 This Weeks Highlights
@@ -150,19 +167,15 @@
             <div class="w-16 h-[2px] bg-[#374151] mx-auto mt-2"></div>
         </div>
 
-
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-
-
             <div class="relative h-80 overflow-hidden group md:col-span-1">
                 <img src="./public/images/Rectangle 47.png" class="w-full h-full object-cover ">
 
-                <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
-                    <h class="text-white text-2xl sm:text-3xl md:text-4xl font-bold text-center">
+                <div class="absolute inset-0 flex items-center md:px-5 justify-center">
+                    <h3 class="text-white text-2xl sm:text-3xl md:text-4xl font-bold text-center">
                         Exclusive Shoes
-                    </h>
-
-                    <div class="absolute bottom-4 left-4 bg-black/50 p-3 text-white text-xs">
+                    </h3>
+                    <div class="absolute bottom-4 left-4 bg-black/30 p-3 text-white text-xs">
                         <p class="font-semibold">Exclusive Shoes</p>
                         <p>PRICE 20% OFF</p>
                         <P>DISCOUNT CODE - VATR3920</p>
@@ -170,16 +183,15 @@
                 </div>
             </div>
 
-
             <div class="relative h-80 overflow-hidden group md:col-span-3">
                 <img src="./public/images/Rectangle 51.png" class="w-full h-full object-cover ">
 
-                <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                <div class="absolute inset-0 flex items-center justify-center">
                     <h3 class="text-white text-2xl sm:text-3xl md:text-4xl font-bold text-center">
                         Exquisite Styles & <br>Collectios
                     </h3>
 
-                    <div class="absolute bottom-4 left-4 bg-black/50 p-3 text-white text-xs">
+                    <div class="absolute bottom-4 left-4 bg-black/30 p-3 text-white text-xs">
                         <p class="font-semibold">Exquisite Styles & Collections</p>
                         <p>PRICE 20% OFF</p>
                         <P>DISCOUNT CODE - VATR3920</p>
@@ -191,12 +203,12 @@
             <div class="relative h-80 overflow-hidden group md:col-span-3">
                 <img src="./public/images/Rectangle 57.png" class="w-full h-full object-cover">
 
-                <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                <div class="absolute inset-0 flex items-center justify-center">
                     <h3 class="text-white text-2xl sm:text-3xl md:text-4xl font-bold text-center">
                         New Arrivals
                     </h3>
 
-                    <div class="absolute bottom-4 left-4 bg-black/50 p-3 text-white text-xs">
+                    <div class="absolute bottom-4 left-4 bg-black/30 p-3 text-white text-xs">
                         <p class="font-semibold">New Arrivals</p>
                         <p>PRICE 20% OFF</p>
                         <P>DISCOUNT CODE - VATR3920</p>
@@ -207,12 +219,12 @@
             <div class="relative h-80 overflow-hidden group md:col-span-1">
                 <img src="./public/images/Rectangle 56.png" class="w-full h-full object-cover ">
 
-                <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                <div class="absolute inset-0 flex items-center md:px-5 justify-center">
                     <h3 class="text-white text-2xl sm:text-3xl md:text-4xl font-bold text-center">
                         Exclusive Items
                     </h3>
 
-                    <div class="absolute bottom-4 left-4 bg-black/50 p-3 text-white text-xs">
+                    <div class="absolute bottom-4 left-4 bg-black/30 p-3 text-white text-xs">
                         <p class="font-semibold">Exclusive Items</p>
                         <p>PRICE 20% OFF</p>
                         <P>DISCOUNT CODE - VATR3920</p>
@@ -236,7 +248,7 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:gap-8 lg:grid-cols-4 gap-6">
-                <!-- item 1 -->
+
                 <div class="group flex flex-col">
                     <div class="aspect-[3/4] overflow-hidden mb-3">
                         <img src="./public/images/Rectangle 52.png" alt="Faux Fur Collar Coat"
@@ -254,7 +266,6 @@
                     </div>
                 </div>
 
-                <!-- Product Item 2 -->
                 <div class="group bg-white">
                     <div class="aspect-[3/4] mb-3">
                         <img src="./public/images/Rectangle 53.png" alt="Floral Print Dress"
@@ -272,7 +283,7 @@
                     </div>
                 </div>
 
-                <!-- Product Item 3 -->
+
                 <div class="group bg-white">
                     <div class="aspect-[3/4]  mb-3">
                         <img src="./public/images/Rectangle 54.png" alt="High Neck Sweater"
@@ -290,7 +301,6 @@
                     </div>
                 </div>
 
-                <!-- Product Item 4 -->
                 <div class="group bg-white">
                     <div class="aspect-[3/4]  mb-3">
                         <img src="./public/images/Rectangle 55.png" alt="Ribbed Crop Top"
@@ -312,7 +322,7 @@
     </section>
 
     <!-- Section 6-->
-    <section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <section class="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div class="text-center mb-10 md:mb-12">
             <h2 class="text-[24px] font-[600] uppercase  text-[#374151]">
                 Popular this week
@@ -333,9 +343,9 @@
 
     <!-- Section 7-->
     <section
-        class="relative max-w-[1264px] mx-auto min-h-[500px] md:min-h-[515px] flex items-center overflow-hidden mx-10 my-8">
+        class="relative max-w-[1440px] lg:min-w-[1264px] mx-auto min-h-[500px] md:min-h-[515px] flex items-center overflow-hidden mx-10 my-8">
         <img src="./public/images/image 6.png" alt="Summer Collections"
-            class="absolute inset-0 w-full h-full object-cover object-right md:object-center" />
+            class="absolute inset-0 w-full h-full items-center object-cover object-right md:object-center" />
         <div class="absolute inset-0 bg-black/10"></div>
         <div
             class="relative z-10 w-full px-6 py-12 sm:px-12 md:px-16 lg:px-24 flex flex-col justify-between gap-8 md:gap-12">
@@ -346,13 +356,14 @@
                 </h2>
 
                 <a href="#"
-                    class="inline-flex items-center justify-between gap-4 px-6 py-3 bg-white text-[#EB5757] font-semibold text-sm sm:text-base tracking-wider uppercase rounded-sm shadow-md hover:bg-gray-50 transition-colors w-fit">
+                    class="inline-flex items-center justify-between gap-4 px-6 py-3 bg-white text-[#EB5757] font-semibold text-sm sm:text-base tracking-wider uppercase rounded-sm shadow-md  ">
                     <span>Shop Now</span>
                     <i class="fa-solid fa-arrow-right text-lg"></i>
                 </a>
             </div>
 
-            <div class="flex gap-1 sm:gap-5 text-[#FFFFFF] items-center">
+            <div
+                class="flex gap-1 sm:gap-5 text-[#FFFFFF]  text-[16px] sm:text-[20px] md:text-[24px] font-bold tracking-wider ">
                 <div class="text-center">
                     <span class="block text-xl sm:text-2xl font-bold leading-none">07</span>
                     <span class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider opacity-90">Days</span>
@@ -382,7 +393,8 @@
 
     <!-- Footer Section 8 -->
 
-    <footer class="w-full bg-[#F9FAFB] text-sm py-[62px] px-4 sm:px-8 lg:px-[72px]">
+    <footer
+        class="lg:w-[1440px] w-auto  px-4 bg-[#F9FAFB] text-sm py-[62px] px-4 sm:px-8 lg:px-[72px] flex flex-col justify-center">
         <div class="max-w-[1296px] mx-auto space-y-12">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-8">
@@ -439,10 +451,10 @@
                     </div>
 
 
-                    <div class="space-y-2">
+                    <div>
                         <h5 class="font-bold text-[#1F2937] uppercase tracking-wider text-xs">Sign Up for Laura’s Closet
                             Style News</h5>
-                        <form class="flex items-center max-w-md">
+                        <form class="flex items-center max-w-md space-x-2 mt-2 ">
                             <input type="email" placeholder="Your email"
                                 class="w-full bg-white border border-[#9CA3AF] px-3 py-2 text-xs focus:outline-none">
                             <button type="submit"
