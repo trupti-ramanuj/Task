@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Playwrite+DK+Uloopet+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        rubik: ["Rubik", "sans-serif"],
+                    },
+                    colors: {
+                        bg: "hsl(226, 43%, 10%)",
+                        card: "hsl(235, 46%, 20%)",
+                        profile: "hsl(246, 80%, 60%)",
+
+                        orange: "hsl(15, 100%, 70%)",
+                        blue: "hsl(195, 74%, 62%)",
+                        pink: "hsl(348, 100%, 68%)",
+                        green: "hsl(145, 58%, 55%)",
+                        purple: "hsl(264, 64%, 52%)",
+                        yellow: "hsl(43, 84%, 65%)",
+
+                        navy: "hsl(236, 45%, 79%)",
+                    },
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="bg-bg font-rubik min-h-screen flex justify-center items-center py-10">
+    <main class="w-full max-w-[1440px] px-6">
+        <div class="grid gap-6 lg:grid-cols-4">
+            <div class="bg-card rounded-2xl overflow-hidden lg:row-span-2">
+                <div class="bg-profile p-8 rounded-2xl">
+                    <img src="./images/image-jeremy.png" alt="jeremy" class="w-20 border-4 border-white rounded-full ">
+
+                    <p class="text-navy mt-8 text-sm">Report for</p>
+                    <h1 class="text-4xl font-light text-white mt-2 leading-tight">Jeremy <br> Robson</h1>
+                </div>
+                <div class="flex lg:flex-col justify-between p-8 ">
+                    <button class="text-navy hover:text-white duration-300">Daily</button>
+
+                    <button class="text-white font-medium">Weekly</button>
+                    <button class="text-navy hover:text-white duration-300">Monthly</button>
+                </div>
+            </div>
+
+            <div class="bg-orange rounded-2xl overflow-hidden relative">
+                <img src="./images/icon-work.svg" alt="work" class="absolute right-4 -top-2">
+                <div class="relative p-7  bg-card mt-10 rounded-2xl hover:bg-orange duration-300 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-white font-bold">Work</h2>
+                        <button class="text-navy text-2xl hover:text-white duration-300">...</button>
+                    </div>
+                    <div class="lg:block flex justify-between items-center mt-5">
+                        <h3 class="text-white text-6xl font-light">32hrs</h3>
+                        <p class="text-navy mt-3">Last Week - 36hrs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-blue rounded-2xl overflow-hidden relative">
+                <img src="./images/icon-play.svg" alt="play" class="absolute right-4 -top-2">
+                <div class="relative p-7  bg-card mt-10 rounded-2xl hover:bg-blue duration-300 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-white font-bold">Play</h2>
+                        <button class="text-navy text-2xl hover:text-white duration-300">...</button>
+                    </div>
+                    <div class="lg:block flex justify-between items-center mt-5">
+                        <h3 class="text-white text-6xl font-light">10hrs</h3>
+                        <p class="text-navy mt-3">Last Week - 8hrs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-pink rounded-2xl overflow-hidden relative">
+                <img src="./images/icon-study.svg" alt="study" class="absolute right-4 -top-2">
+                <div class="relative p-7  bg-card mt-10 rounded-2xl hover:bg-pink duration-300 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-white font-bold">Study</h2>
+                        <button class="text-navy text-2xl hover:text-white duration-300">...</button>
+                    </div>
+                    <div class="lg:block flex justify-between items-center mt-5">
+                        <h3 class="text-white text-6xl font-light">4hrs</h3>
+                        <p class="text-navy mt-3">Last Week - 7hrs</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-green rounded-2xl overflow-hidden relative">
+                <img src="./images/icon-exercise.svg" alt="exercise" class="absolute right-4 -top-2">
+                <div class="relative p-7  bg-card mt-10 rounded-2xl hover:bg-green duration-300 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-white font-bold">Exercise</h2>
+                        <button class="text-navy text-2xl hover:text-white duration-300">...</button>
+                    </div>
+                    <div class="lg:block flex justify-between items-center mt-5">
+                        <h3 class="text-white text-6xl font-light">4hrs</h3>
+                        <p class="text-navy mt-3">Last Week - 5hrs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-purple rounded-2xl overflow-hidden relative">
+                <img src="./images/icon-social.svg" alt="social" class="absolute right-4 -top-2">
+                <div class="relative p-7  bg-card mt-10 rounded-2xl hover:bg-purple duration-300 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-white font-bold">Social</h2>
+                        <button class="text-navy text-2xl hover:text-white duration-300">...</button>
+                    </div>
+                    <div class="lg:block flex justify-between items-center mt-5">
+                        <h3 class="text-white text-6xl font-light">5hrs</h3>
+                        <p class="text-navy mt-3">Last Week - 10hrs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-yellow rounded-2xl overflow-hidden relative">
+                <img src="./images/icon-self-care.svg" alt="self-care" class="absolute right-4 -top-2">
+                <div class="relative p-7  bg-card mt-10 rounded-2xl hover:bg-yellow duration-300 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-white font-bold">Self Care</h2>
+                        <button class="text-navy text-2xl hover:text-white duration-300">...</button>
+                    </div>
+                    <div class="lg:block flex justify-between items-center mt-5">
+                        <h3 class="text-white text-6xl font-light">2hrs</h3>
+                        <p class="text-navy mt-3">Last Week - 2hrs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
