@@ -14,7 +14,7 @@
     }
 
     button {
-        color: navy;
+        color: blue;
         border: 2px solid beige;
         padding: 10px 30px;
         border-radius: 8px;
@@ -23,22 +23,40 @@
 
 <body>
     <div></div>
-    <button id="color">Start</button>
+    <button id="red">red</button>
+    <button id="green">Green</button>
 </body>
 <script>
-    const randomColor = function () {
-        const hex = "0123456789ABCDEF"
-        let color = "#"
-        for (let i = 0; i < 6; i++) {
-            color += hex[Math.floor(Math.random() * 16)]
-        }
-        return color
-    }
+    // const randomColor = function () {
+    //     const hex = "0123456789ABCDEF"
+    //     let color = "#"
+    //     for (let i = 0; i < 6; i++) {
+    //         color += hex[Math.floor(Math.random() * 16)]
+    //     }
+    //     return color
+    // }
 
-    function startChangingColor() {
-        document.querySelector('div').style.backgroundColor = randomColor()
-    }
-    document.querySelector('#color').addEventListener('click', startChangingColor)
+
+    // document.querySelector('button').addEventListener('click', (e) => {
+
+    //     console.log(e);
+    // })
+    // function startChangingColor() {
+    //     document.querySelector('div').style.backgroundColor = randomColor()
+    // }
+    // document.querySelector('#color').addEventListener('click', startChangingColor)
+
+    const red = "#ff0000";
+    const green = "#008000";
+
+    document.querySelector('#red').addEventListener('click', function () {
+        document.querySelector('div').style.backgroundColor = red
+    })
+
+    document.querySelector('#green').addEventListener('click', function () {
+        document.querySelector('div').style.backgroundColor = green
+    })
+
 </script>
 
 </html>
