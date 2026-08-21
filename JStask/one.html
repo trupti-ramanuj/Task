@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+    }
+
+    button {
+        color: navy;
+        border: 2px solid beige;
+        padding: 10px 30px;
+        border-radius: 8px;
+    }
+</style>
+
+<body>
+    <div></div>
+    <button id="color">Start</button>
+</body>
+<script>
+    const randomColor = function () {
+        const hex = "0123456789ABCDEF"
+        let color = "#"
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random() * 16)]
+        }
+        return color
+    }
+
+    function startChangingColor() {
+        document.querySelector('div').style.backgroundColor = randomColor()
+    }
+    document.querySelector('#color').addEventListener('click', startChangingColor)
+</script>
+
+</html>

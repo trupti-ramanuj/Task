@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #212121;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div {
+        width: 400px;
+        height: 400px;
+        border: 1px solid beige;
+    }
+</style>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+<script>
+    const divs = document.querySelectorAll('div')
+
+    divs.forEach(function (e) {
+        e.addEventListener('mouseenter', function () {
+            e.style.transform = 'scale(1.1)'
+        })
+
+        e.addEventListener('mouseleave', function () {
+            e.style.transform = 'scale(1)'
+        })
+    })
+</script>
+
+</html>
